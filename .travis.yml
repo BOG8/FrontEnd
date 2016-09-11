@@ -1,3 +1,7 @@
 language: node_js
 node_js:
 - 6
+deploy:
+  provider: heroku
+  api_key: b5e71d94-8639-4352-990e-f615b8212e54
+  app: my-first-deploy
