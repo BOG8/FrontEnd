@@ -3,7 +3,18 @@
 let userData = {};
 
 function filter (str, rules = ['КЕК']) {
-	return `//TODO: реализовать filter`;
+	var pos = 0;        
+
+	while (true) {
+	    var foundPos = str.indexOf("КЕК", pos);
+  	    if (foundPos == -1) 
+	        break;
+	
+	    str = str.substring(0, foundPos) + "***" + str.substring(foundPos + 3);
+	    pos = foundPos + 1; // продолжить поиск со следующей
+	}
+
+	return str;
 }
 
 function onLogin (form, block) {
